@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="Main">
+        <div class="wrapper">
+            <div >
+                <div class="registration-content-box">
+                    <div>
+                        <div>
+                            <h1>Sign Up</h1>
+                        </div>
+                        <form  class="registration-form" action="#">
+                            <div>
+                                <input class="input-field" id="fullname" type="text" placeholder="Full Name" required>
+                            </div>
+                            <div>
+                                <input class="input-field" type="text" placeholder="Username" required>
+                            </div>
+                            <div>
+                                <input class="input-field" type="text" placeholder="Email" required>
+                            </div>
+                            <div>
+                                <input class="input-field" type="password" placeholder="Password" required>
+                            </div>
+                            <div>
+                                <input class="input-field" type="password" placeholder="Re-type Your Password" required>
+                            </div>
+                            <div class="checkbox-field">
+                                <input type="checkbox" required>
+                                I agree to the terms
+                            </div>
+                            <div>
+                                <button class="rg-sign-btn" type="button" onclick="func()">Sign In</button>
+                            </div>
+                            <div>
+                                <button class="rg-sign-btn" type="button" onclick="">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    let func = () => {
+        let name = document.getElementById("fullname").value;
+        let elem = document.createElement('div');
+        let wrap = document.getElementsByClassName("wrapper");
+        elem.innerText = name;
+        wrap.appendChild(elem);
+        console.log(name)
+
+    }
+
+
+</script>
+</body>
+</html>
