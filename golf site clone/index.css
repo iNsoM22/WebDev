@@ -1,0 +1,239 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: white;
+    /* background: rgba(0,0,0,0.6); */
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav-bar {
+    padding-top: 0.8vw;
+    padding-bottom: 0.2vw;
+    background: rgb(0,0,0);
+    position: fixed;
+    top:0;
+    display: flex;
+    width: 100vw;
+    height: 12vh;
+    align-items: center;
+    z-index: 10;
+}
+
+#nav-logo-pic {
+    display: flex;
+    padding-left: 6vw;
+    margin-right: 3vw;
+    min-width: 7vw;
+}
+
+.nav-bar-menu-and-options {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    gap: 1.2vw;
+    text-align: center;
+    margin-right: 15vw;
+}
+
+
+.nav-menu-options {
+    display: flex;
+    max-width: 14vw;
+    font-size: 0.97vw;
+    transition: color 0.8s;
+}
+
+.nav-menu-options:hover {
+    color: hsl(120, 90%, 55%);
+}
+
+.nav-buttons {
+    display: inline;
+    padding: 1.2vw 3vw;
+    max-width: 1.2vw;
+    min-width: 2;
+    border: 3px solid rgb(14, 255, 14);
+    border-radius: 40px;
+    margin-right: 10px;
+    transition: background 1s;
+}
+
+.nav-buttons:hover {
+    background: hsl(120, 90%, 55%);
+}
+
+.video-playback { 
+    position: fixed;
+    top: 4vh;
+    z-index: -99;
+
+}
+
+.video-playback video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.content-container {
+    background: none;
+    z-index: 10;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.7);
+}
+
+.main-poster-label {
+    background: rgba(0,0,0,0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-poster-label h1 {
+    display: inline-block;
+    background: rgba(0,0,0,0);
+    position: relative;
+    font-size: 9vw;
+    font-weight: 900;
+}
+
+.main-poster-label h2 {
+    display: flex;
+    padding: 1vh;
+    background: rgba(0,0,0,0);
+    font-size: 2vw;
+    font-weight: 900;
+    justify-content: center;
+}
+
+.main-poster-label h4{
+    padding-left: 30vw;
+    padding-right: 30vw;
+    background: none;
+    display: flex;
+    font-size: 1.2vw;
+    font-weight: 300;
+    justify-content: center;    
+}
+
+.main-poster-label h1::before {
+    background: none;
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    top: 0.7vh;
+    -webkit-text-stroke: 2px hsl(120, 89%, 58%);
+}
+
+
+.page2 {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.7);
+}
+
+.floating-banner {
+    display: flex;
+    background: rgba(0,0,0,0.4);
+    white-space: nowrap;   
+    padding: 2vh 0.6vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+.floating-banner div {
+    display: inline-block;
+    white-space: nowrap;
+    animation: forwards floating-labels;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+.floating-banner h1 {
+    font-size: 5.5vw;
+    color: hsl(120, 89%, 58%);
+    display: inline;
+    white-space: nowrap;
+    -webkit-text-stroke: 4px black;
+    transition: color 0.7s;
+}
+.floating-banner::-webkit-scrollbar{
+    scroll-snap-type: none;
+}
+
+@keyframes floating-labels { 
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.floating-banner h1:hover{
+    color: white;
+}
+
+.footer-section {
+    display: flex;
+    padding-top: 17vh;;
+    justify-content: space-evenly;
+    align-self: end;
+}
+
+#left-img img,
+#right-img img{
+    height: 200px;
+    width: 190px;
+    border: 4px solid rgb(70, 255, 70);
+    border-radius: 50%;
+    transition: opacity 0.5s;
+}
+
+#about-section { 
+    width: 30vw;
+    height: fit-content;
+}
+
+#about-section h1 { 
+    font-size: 3.5vw;
+    font-weight: 900;
+    padding-bottom: 3vh;
+    transition: color 0.8s;
+}
+
+#about-section h3 { 
+    transition: color 0.8s;
+}
+
+#right-img img:hover,
+#left-img img:hover{
+    opacity: 0.5;
+}
+
+
+
+#about-section h3:hover,
+#about-section h1:hover{
+    color: hsl(120, 89%, 58%);
+}
