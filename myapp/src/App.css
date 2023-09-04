@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;    
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main > h1 {
+    display: inline;
+    width: 100%;
+    height: 4vmax;
+    padding: 2vh;    
+    font-size: 3.5vmax;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.main > form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-containers {
+    width: 70vw;
+    padding: 4vw 5vh;
+}
+
+.title-field {
+    height: 60px;
+    margin-bottom: 24px;
+    width: 95%;
+    border: none;
+    border-bottom: 3px solid rgba(0,0,0,0.8);
+    text-align: left;
+}
+
+.desc-field {
+    height: 20vh;
+    margin-left: 1.1vw;
+    width: 100%;
+    text-align: left;
+    border: 5px solid rgba(0,0,0,0.5);
+}
+
+.add-btn {
+    height: 2vmax;
+    background-color: rgb(17, 147, 47);
+    padding: 1.5vmax;
+    display: flex;
+    align-items: center;
+    border: none;
+    color: white;
+    margin-top: 10vmin;
+    margin-left: -5vh;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width: 85%;
+    overflow-x: hidden;
+    color: white;
+    padding-bottom: 5px;
+    background: rgb(138, 131, 109);
+}
+
+.tasks-container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(214, 201, 157);
+    border: 2px solid rgb(0,0,0);
+}
+
+.title-descr {
+    padding: 10px 10px;
+}
+
+.title-descr h5 {
+    width: 100%;
+    color: rgba(12, 12, 12, 0.84);
+    font-weight: 900;
+    font-size: 20px;
+    text-align: left;
+}
+
+.title-descr p {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.687);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+}
+
+.remove-btn {
+    height: 30px;
+    width: 30px;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    margin-right: 2%;
+    align-items: center;
+    justify-content: center;
+    border: none;    
+    background-color: crimson;
+    transition: all 1s background-color;
+}
+
+
+.remove-btn:hover {
+    background-color: red;
+}
+
+.remove-btn:active {
+    transform: translateX(5%) translateY(5%);
+}
